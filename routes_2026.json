@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "reavaya_effective": "2026-07-01",
+    "gautrain_effective": "2026-09-01",
+    "peak_windows_weekdays": ["06:00-08:30", "15:00-18:30"]
+  },
+  "reavaya_distance_bands_zar": [
+    { "max_km": 5, "peak": 11.50, "off_peak": 10.00 },
+    { "max_km": 10, "peak": 14.50, "off_peak": 13.00 },
+    { "max_km": 15, "peak": 17.00, "off_peak": 15.00 },
+    { "max_km": 25, "peak": 19.50, "off_peak": 17.50 },
+    { "max_km": 35, "peak": 21.50, "off_peak": 19.50 },
+    { "max_km": 45, "peak": 22.50, "off_peak": 20.50 },
+    { "max_km": 999, "peak": 28.50, "off_peak": 26.50 }
+  ],
+  "gautrain_routes_zar": {
+    "Park Station-Rosebank": { "peak": 38.00, "off_peak": 30.00, "mins": 6 },
+    "Park Station-Sandton": { "peak": 49.00, "off_peak": 39.00, "mins": 11 },
+    "Park Station-Midrand": { "peak": 68.00, "off_peak": 54.00, "mins": 21 },
+    "Park Station-Centurion": { "peak": 85.00, "off_peak": 68.00, "mins": 31 },
+    "Park Station-Pretoria": { "peak": 96.00, "off_peak": 77.00, "mins": 37 },
+    "Park Station-Hatfield": { "peak": 106.00, "off_peak": 85.00, "mins": 42 },
+    "Sandton-OR Tambo": { "peak": 205.00, "off_peak": 164.00, "mins": 15 }
+  },
+  "corridors": [
+    {
+      "id": "dobsonville-sandton",
+      "origin": "Dobsonville",
+      "destination": "Sandton",
+      "legs": [
+        { "mode": "Rea Vaya", "route": "F2 Feeder -> T1 Trunk to Library Gardens / Park Station", "distance_km": 24, "mins": 55 },
+        { "mode": "Gautrain", "route": "North-South Line (Park Station -> Sandton)", "gautrain_key": "Park Station-Sandton", "mins": 11 }
+      ],
+      "transfer_notes": "Do NOT tap out at intermediate Rea Vaya feeder-to-trunk stops—only tap out at Park Station/Library Gardens to keep the single-journey fare. Minimum card balances: R30 (Rea Vaya ABT) and R38 (Gautrain or contactless bank card)."
+    },
+    {
+      "id": "thokoza-rosebank",
+      "origin": "Thokoza Park (Soweto)",
+      "destination": "Rosebank",
+      "legs": [
+        { "mode": "Rea Vaya", "route": "T1 Trunk (Thokoza Park -> Park Station)", "distance_km": 20, "mins": 45 },
+        { "mode": "Gautrain", "route": "North-South Line (Park Station -> Rosebank)", "gautrain_key": "Park Station-Rosebank", "mins": 6 }
+      ],
+      "transfer_notes": "Walk 5 mins from Rea Vaya Park Station stop to the underground Gautrain concourse. Tap in with contactless Visa/Mastercard or Gautrain card."
+    },
+    {
+      "id": "maponya-hatfield",
+      "origin": "Maponya Mall (Klipspruit)",
+      "destination": "Hatfield (Pretoria)",
+      "legs": [
+        { "mode": "Rea Vaya", "route": "T1 Trunk (Maponya Mall -> Park Station)", "distance_km": 22, "mins": 50 },
+        { "mode": "Gautrain", "route": "North-South Line (Park Station -> Hatfield)", "gautrain_key": "Park Station-Hatfield", "mins": 42 }
+      ],
+      "transfer_notes": "Off-peak travel (08:30–15:00 or after 18:30) saves ~20% on the Gautrain leg and 10% on Rea Vaya."
+    }
+  ]
+}
